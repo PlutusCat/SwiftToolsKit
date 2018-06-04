@@ -58,14 +58,10 @@
 		41EF760320C5033D005F9627 /* SwiftToolsKit */ = {
 			isa = PBXGroup;
 			children = (
+				41EF761D20C512F8005F9627 /* Main */,
+				41EF761B20C50B60005F9627 /* Demos */,
 				41EF761620C50367005F9627 /* SwiftToolsKit */,
-				41EF760420C5033D005F9627 /* AppDelegate.swift */,
-				41EF760620C5033D005F9627 /* ViewController.swift */,
-				41EF761920C5079C005F9627 /* DataModel.swift */,
-				41EF760820C5033D005F9627 /* Main.storyboard */,
-				41EF760B20C5033F005F9627 /* Assets.xcassets */,
-				41EF760D20C5033F005F9627 /* LaunchScreen.storyboard */,
-				41EF761020C5033F005F9627 /* Info.plist */,
+				41EF761C20C512E5005F9627 /* Other */,
 			);
 			path = SwiftToolsKit;
 			sourceTree = "<group>";
@@ -76,6 +72,34 @@
 				41EF761720C50387005F9627 /* DateTools.swift */,
 			);
 			path = SwiftToolsKit;
+			sourceTree = "<group>";
+		};
+		41EF761B20C50B60005F9627 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		41EF761C20C512E5005F9627 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				41EF760B20C5033F005F9627 /* Assets.xcassets */,
+				41EF761020C5033F005F9627 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		41EF761D20C512F8005F9627 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				41EF760420C5033D005F9627 /* AppDelegate.swift */,
+				41EF760620C5033D005F9627 /* ViewController.swift */,
+				41EF761920C5079C005F9627 /* DataModel.swift */,
+				41EF760820C5033D005F9627 /* Main.storyboard */,
+				41EF760D20C5033F005F9627 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +321,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftToolsKit/Info.plist;
+				DEVELOPMENT_TEAM = D8DP89SRM4;
+				INFOPLIST_FILE = SwiftToolsKit/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -316,8 +340,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = SwiftToolsKit/Info.plist;
+				DEVELOPMENT_TEAM = D8DP89SRM4;
+				INFOPLIST_FILE = SwiftToolsKit/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
