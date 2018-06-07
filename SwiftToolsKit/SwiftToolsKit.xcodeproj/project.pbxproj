@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */; };
+		41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */; };
 		41EF760520C5033D005F9627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF760420C5033D005F9627 /* AppDelegate.swift */; };
 		41EF760720C5033D005F9627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF760620C5033D005F9627 /* ViewController.swift */; };
 		41EF760A20C5033D005F9627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF760820C5033D005F9627 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToolsViewController.swift; sourceTree = "<group>"; };
+		41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToolsViewController.swift; sourceTree = "<group>"; };
 		41EF760120C5033D005F9627 /* SwiftToolsKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToolsKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41EF760420C5033D005F9627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41EF760620C5033D005F9627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		41EF761B20C50B60005F9627 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */,
+				41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 				41EF761A20C5079C005F9627 /* DataModel.swift in Sources */,
 				41EF760520C5033D005F9627 /* AppDelegate.swift in Sources */,
 				41EF761820C50387005F9627 /* DateTools.swift in Sources */,
+				41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */,
+				41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

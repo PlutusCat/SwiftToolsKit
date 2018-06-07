@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.prefersLargeTitles = true
+
         datas = [
             DataModel(title: "DateTools", info: "DateTools"),
             DataModel(title: "ColorTools", info: "ColorTools")
@@ -57,6 +59,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
+        let vcName = datas[indexPath.row].title
+
+        let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]
+        let clsName = "\(namespace!)." + vcName + "ViewController"
+        let clss = NSClassFromString(clsName) as! UIViewController.Type
+        let VC = clss.init()
+        navigationController?.pushViewController(VC, animated: true)
 
     }
 
