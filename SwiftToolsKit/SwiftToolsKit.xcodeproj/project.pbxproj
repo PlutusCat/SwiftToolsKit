@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */; };
 		41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */; };
+		41C8A6F320CA511200CAA554 /* UIColorToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */; };
 		41EF760520C5033D005F9627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF760420C5033D005F9627 /* AppDelegate.swift */; };
 		41EF760720C5033D005F9627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF760620C5033D005F9627 /* ViewController.swift */; };
 		41EF760A20C5033D005F9627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF760820C5033D005F9627 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToolsViewController.swift; sourceTree = "<group>"; };
 		41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToolsViewController.swift; sourceTree = "<group>"; };
+		41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorToolsKit.swift; sourceTree = "<group>"; };
 		41EF760120C5033D005F9627 /* SwiftToolsKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToolsKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41EF760420C5033D005F9627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41EF760620C5033D005F9627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				41EF761720C50387005F9627 /* DateTools.swift */,
+				41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */,
 			);
 			path = SwiftToolsKit;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				41EF761820C50387005F9627 /* DateTools.swift in Sources */,
 				41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */,
 				41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */,
+				41C8A6F320CA511200CAA554 /* UIColorToolsKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
