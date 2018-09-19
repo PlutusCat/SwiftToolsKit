@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41AABED4214F8EDA002646FE /* TextSizeToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AABED3214F8EDA002646FE /* TextSizeToolsViewController.swift */; };
+		41AABED6214F8F77002646FE /* TextSizeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AABED5214F8F77002646FE /* TextSizeTools.swift */; };
+		41AABED8214F9394002646FE /* LabelKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AABED7214F9394002646FE /* LabelKit.swift */; };
 		41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */; };
 		41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */; };
 		41C8A6F320CA511200CAA554 /* UIColorToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */; };
@@ -17,9 +20,13 @@
 		41EF760F20C5033F005F9627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF760D20C5033F005F9627 /* LaunchScreen.storyboard */; };
 		41EF761820C50387005F9627 /* DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF761720C50387005F9627 /* DateTools.swift */; };
 		41EF761A20C5079C005F9627 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF761920C5079C005F9627 /* DataModel.swift */; };
+		41FC913E213E1E9A00BEEAB4 /* StringTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC913D213E1E9A00BEEAB4 /* StringTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41AABED3214F8EDA002646FE /* TextSizeToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeToolsViewController.swift; sourceTree = "<group>"; };
+		41AABED5214F8F77002646FE /* TextSizeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeTools.swift; sourceTree = "<group>"; };
+		41AABED7214F9394002646FE /* LabelKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelKit.swift; sourceTree = "<group>"; };
 		41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToolsViewController.swift; sourceTree = "<group>"; };
 		41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToolsViewController.swift; sourceTree = "<group>"; };
 		41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorToolsKit.swift; sourceTree = "<group>"; };
@@ -32,6 +39,7 @@
 		41EF761020C5033F005F9627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41EF761720C50387005F9627 /* DateTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTools.swift; sourceTree = "<group>"; };
 		41EF761920C5079C005F9627 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		41FC913D213E1E9A00BEEAB4 /* StringTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,9 @@
 			children = (
 				41EF761720C50387005F9627 /* DateTools.swift */,
 				41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */,
+				41FC913D213E1E9A00BEEAB4 /* StringTools.swift */,
+				41AABED5214F8F77002646FE /* TextSizeTools.swift */,
+				41AABED7214F9394002646FE /* LabelKit.swift */,
 			);
 			path = SwiftToolsKit;
 			sourceTree = "<group>";
@@ -86,6 +97,7 @@
 			children = (
 				41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */,
 				41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */,
+				41AABED3214F8EDA002646FE /* TextSizeToolsViewController.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -182,10 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AABED8214F9394002646FE /* LabelKit.swift in Sources */,
+				41AABED4214F8EDA002646FE /* TextSizeToolsViewController.swift in Sources */,
 				41EF760720C5033D005F9627 /* ViewController.swift in Sources */,
 				41EF761A20C5079C005F9627 /* DataModel.swift in Sources */,
 				41EF760520C5033D005F9627 /* AppDelegate.swift in Sources */,
 				41EF761820C50387005F9627 /* DateTools.swift in Sources */,
+				41AABED6214F8F77002646FE /* TextSizeTools.swift in Sources */,
+				41FC913E213E1E9A00BEEAB4 /* StringTools.swift in Sources */,
 				41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */,
 				41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */,
 				41C8A6F320CA511200CAA554 /* UIColorToolsKit.swift in Sources */,

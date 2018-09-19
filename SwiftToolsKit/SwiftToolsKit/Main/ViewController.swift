@@ -8,6 +8,8 @@
 
 import UIKit
 
+let CellReuseIdentifier = "UITableViewCell_Identifier"
+
 class ViewController: UIViewController {
 
     var datas: [DataModel] = []
@@ -21,10 +23,11 @@ class ViewController: UIViewController {
 
         datas = [
             DataModel(title: "DateTools", info: "DateTools"),
-            DataModel(title: "ColorTools", info: "ColorTools")
+            DataModel(title: "ColorTools", info: "ColorTools"),
+            DataModel(title: "TextSizeTools", info: "TextSizeTools")
         ]
 
-        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableview.register(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
 
     }
 
@@ -42,7 +45,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier, for: indexPath)
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = datas[indexPath.row].title
         return cell
