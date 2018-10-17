@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411C526F21757E7D009C8DF9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C526E21757E7D009C8DF9 /* WebKit.framework */; };
+		411C5275217711D6009C8DF9 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411C5274217711D6009C8DF9 /* BaseWebViewController.swift */; };
 		41AABED4214F8EDA002646FE /* TextSizeToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AABED3214F8EDA002646FE /* TextSizeToolsViewController.swift */; };
 		41AABED6214F8F77002646FE /* TextSizeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AABED5214F8F77002646FE /* TextSizeTools.swift */; };
 		41AABED8214F9394002646FE /* LabelKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AABED7214F9394002646FE /* LabelKit.swift */; };
 		41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */; };
 		41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */; };
 		41C8A6F320CA511200CAA554 /* UIColorToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */; };
+		41D4A9AB21703CF3007D5692 /* NavigationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4A9AA21703CF3007D5692 /* NavigationLayout.swift */; };
 		41EF760520C5033D005F9627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF760420C5033D005F9627 /* AppDelegate.swift */; };
 		41EF760720C5033D005F9627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF760620C5033D005F9627 /* ViewController.swift */; };
 		41EF760A20C5033D005F9627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF760820C5033D005F9627 /* Main.storyboard */; };
@@ -24,12 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411C526E21757E7D009C8DF9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		411C5274217711D6009C8DF9 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		41AABED3214F8EDA002646FE /* TextSizeToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeToolsViewController.swift; sourceTree = "<group>"; };
 		41AABED5214F8F77002646FE /* TextSizeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeTools.swift; sourceTree = "<group>"; };
 		41AABED7214F9394002646FE /* LabelKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelKit.swift; sourceTree = "<group>"; };
 		41C8A6CF20C8DC0700CAA554 /* DateToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToolsViewController.swift; sourceTree = "<group>"; };
 		41C8A6D120C91C9800CAA554 /* ColorToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToolsViewController.swift; sourceTree = "<group>"; };
 		41C8A6F220CA511200CAA554 /* UIColorToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorToolsKit.swift; sourceTree = "<group>"; };
+		41D4A9AA21703CF3007D5692 /* NavigationLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLayout.swift; sourceTree = "<group>"; };
 		41EF760120C5033D005F9627 /* SwiftToolsKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToolsKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41EF760420C5033D005F9627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41EF760620C5033D005F9627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,17 +53,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411C526F21757E7D009C8DF9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		411C526D21757E7D009C8DF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				411C526E21757E7D009C8DF9 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		41EF75F820C5033D005F9627 = {
 			isa = PBXGroup;
 			children = (
 				41EF760320C5033D005F9627 /* SwiftToolsKit */,
 				41EF760220C5033D005F9627 /* Products */,
+				411C526D21757E7D009C8DF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +104,8 @@
 				41FC913D213E1E9A00BEEAB4 /* StringTools.swift */,
 				41AABED5214F8F77002646FE /* TextSizeTools.swift */,
 				41AABED7214F9394002646FE /* LabelKit.swift */,
+				41D4A9AA21703CF3007D5692 /* NavigationLayout.swift */,
+				411C5274217711D6009C8DF9 /* BaseWebViewController.swift */,
 			);
 			path = SwiftToolsKit;
 			sourceTree = "<group>";
@@ -199,12 +217,14 @@
 				41EF760720C5033D005F9627 /* ViewController.swift in Sources */,
 				41EF761A20C5079C005F9627 /* DataModel.swift in Sources */,
 				41EF760520C5033D005F9627 /* AppDelegate.swift in Sources */,
+				411C5275217711D6009C8DF9 /* BaseWebViewController.swift in Sources */,
 				41EF761820C50387005F9627 /* DateTools.swift in Sources */,
 				41AABED6214F8F77002646FE /* TextSizeTools.swift in Sources */,
 				41FC913E213E1E9A00BEEAB4 /* StringTools.swift in Sources */,
 				41C8A6D220C91C9800CAA554 /* ColorToolsViewController.swift in Sources */,
 				41C8A6D020C8DC0700CAA554 /* DateToolsViewController.swift in Sources */,
 				41C8A6F320CA511200CAA554 /* UIColorToolsKit.swift in Sources */,
+				41D4A9AB21703CF3007D5692 /* NavigationLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

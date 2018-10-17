@@ -24,7 +24,9 @@ class ViewController: UIViewController {
         datas = [
             DataModel(title: "DateTools", info: "DateTools"),
             DataModel(title: "ColorTools", info: "ColorTools"),
-            DataModel(title: "TextSizeTools", info: "TextSizeTools")
+            DataModel(title: "TextSizeTools", info: "TextSizeTools"),
+            DataModel(title: "NavigationLayout", info: "NavigationLayout"),
+            DataModel(title: "BaseWeb", info: "BaseWeb")
         ]
 
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
@@ -56,7 +58,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 60 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
