@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             DataModel(title: "ColorTools", info: "ColorTools"),
             DataModel(title: "TextSizeTools", info: "TextSizeTools"),
             DataModel(title: "NavigationLayout", info: "NavigationLayout"),
-            DataModel(title: "BaseWeb", info: "BaseWeb")
+            DataModel(title: "Web", info: "WebViewKit")
         ]
 
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)

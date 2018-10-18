@@ -41,8 +41,6 @@ class BaseWebViewController: UIViewController {
         createWebView()
         createBottomToolBar()
 
-        let url = "https://www.apple.com"
-        load(URLRequest(url: URL(string: url)!))
     }
 
     override func viewWillAppear(_ animated: Bool) {
