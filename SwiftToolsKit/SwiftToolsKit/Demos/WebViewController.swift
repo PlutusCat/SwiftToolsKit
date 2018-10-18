@@ -13,6 +13,8 @@ class WebViewController: BaseWebViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        isShowMore = false
+
         let url = "https://www.apple.com"
         load(URLRequest(url: URL(string: url)!))
         

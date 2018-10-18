@@ -12,7 +12,6 @@ import WebKit
 class BaseWebViewController: UIViewController {
 
     var webView: WKWebView!
-    var closeItem: UIButton!
     var bottomBar: BottomToolBar!
 
     private var bottomBarY: CGFloat!
@@ -24,6 +23,15 @@ class BaseWebViewController: UIViewController {
         subview.backgroundColor = .white
         return subview
     }()
+
+    var isShowMore : Bool {
+        get {
+            return navigationBar.isShowMore
+        }
+        set {
+            navigationBar.isShowMore = newValue
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +64,7 @@ class BaseWebViewController: UIViewController {
     private func customNavigationBar(hidden: Bool) {
         navigationController?.setNavigationBarHidden(hidden, animated: false)
         view.addSubview(navigationBar)
-        navigationBar.callBack = { [weak self] in
+        navigationBar.closeCallBack = { [weak self] in
             self?.popAction()
         }
     }
@@ -270,11 +278,50 @@ class BottomToolBar: UIView {
 
 class NavigationBar: UIView {
 
-    var callBack: (()->Void)?
-    var progressView: UIProgressView!
-    var titleLabel: UILabel!
+    var closeCallBack: (()->Void)?
+    var moreCallBack: (()->Void)?
 
-    private var closeItem: UIButton!
+    var isShowMore : Bool {
+        get {
+            return moreItem.isHidden
+        }
+        set {
+            moreItem.isHidden = !newValue
+        }
+    }
+
+    lazy var progressView : UIProgressView = {
+        let progressView = UIProgressView(progressViewStyle: .default)
+        progressView.trackTintColor = .clear
+        progressView.progressTintColor = .blue01
+        return progressView
+    }()
+
+    lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .black
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        return titleLabel
+    }()
+
+    private lazy var closeItem : UIButton = {
+        let subview = UIButton(type: .custom)
+        subview.backgroundColor = .white
+        subview.setImage(UIImage(named: "web_close"), for: .normal)
+        subview.addTarget(self, action: #selector(popAction), for: .touchUpInside)
+        subview.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return subview
+    }()
+
+    private lazy var moreItem : UIButton = {
+        let subview = UIButton(type: .custom)
+        subview.backgroundColor = .white
+        subview.setImage(UIImage(named: "web_more"), for: .normal)
+        subview.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
+        subview.imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+        return subview
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -286,26 +333,20 @@ class NavigationBar: UIView {
     }
 
     private func createSubViews() {
-        progressView = UIProgressView(progressViewStyle: .default)
-        progressView.trackTintColor = .clear
-        progressView.progressTintColor = .blue01
         addSubview(progressView)
-
-        closeItem = UIButton(type: .custom)
-        closeItem.setImage(UIImage(named: "web_close"), for: .normal)
-        closeItem.addTarget(self, action: #selector(popAction), for: .touchUpInside)
-        closeItem.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         addSubview(closeItem)
-
-        titleLabel = UILabel()
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = .black
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        addSubview(moreItem)
         addSubview(titleLabel)
     }
 
     @objc private func popAction() {
-        if let cell = callBack {
+        if let cell = closeCallBack {
+            cell()
+        }
+    }
+
+    @objc private func moreAction() {
+        if let cell = moreCallBack {
             cell()
         }
     }
@@ -321,8 +362,11 @@ class NavigationBar: UIView {
         progressView.frame = CGRect(x: 0, y: self.frame.maxY-progressViewH, width: self.frame.width, height: 0.5)
 
         let itemY = NavigationLayout.getStatusBarFrame().maxY
-        let itemW = CGFloat(40)
-        closeItem.frame = CGRect(x: 8, y: itemY, width: itemW, height: itemW)
+        let itemW = NavigationLayout.getNavigationBarHeight()
+        let itemX = NavigationLayout.getSafeArea().left + 8
+        closeItem.frame = CGRect(x: itemX, y: itemY, width: itemW, height: itemW)
+
+        moreItem.frame = CGRect(x: titleLabel.frame.maxX, y: itemY, width: itemW, height: itemW)
 
         let titlemaxX = closeItem.frame.maxX
         titleLabel.frame = CGRect(x: titlemaxX, y: itemY, width: self.frame.width-titlemaxX*2, height: itemW)
