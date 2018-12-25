@@ -18,13 +18,13 @@ class BaseWebViewController: UIViewController {
     private var isToTop: Bool!
     private var bottomBarH = CGFloat(46.0)
 
-    private lazy var navigationBar : NavigationBar = {
+    private lazy var navigationBar: NavigationBar = {
         let subview = NavigationBar()
         subview.backgroundColor = .white
         return subview
     }()
 
-    var isShowMore : Bool {
+    var isShowMore: Bool {
         get {
             return navigationBar.isShowMore
         }
@@ -43,7 +43,7 @@ class BaseWebViewController: UIViewController {
         view.backgroundColor = .background
 
         if NavigationLayout.getSafeArea().bottom > 0.0 {
-            bottomBarH = bottomBarH + CGFloat(16)
+            bottomBarH += CGFloat(16)
         }
 
         createWebView()
@@ -84,9 +84,29 @@ class BaseWebViewController: UIViewController {
         webView.scrollView.delegate = self
         view.addSubview(webView)
 
-        webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
-        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
-        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+//        webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
+//        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
+//        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+
+
+        webView.observe(\.isLoading, options: .new) { (webview, change) in
+            print("正在加载--")
+        }
+
+        _ = webView.observe(\.estimatedProgress, options: .new) { (webview, change) in
+            let float = Float(webview.estimatedProgress)
+            if float == 1.0 {
+                self.navigationBar.progressView.isHidden = true
+            } else {
+                self.navigationBar.progressView.isHidden = false
+                self.navigationBar.progressView.setProgress(float, animated: true)
+            }
+        }
+
+        _ = webView.observe(\.title, options: .new) { (webview, change) in
+            self.navigationBar.titleLabel.text = self.webView.title
+        }
+
     }
 
     private func createBottomToolBar() {
@@ -97,7 +117,7 @@ class BaseWebViewController: UIViewController {
         bottomBar.callBack = { [weak self] isGoBack in
             if isGoBack {
                 self?.previousPage()
-            }else {
+            } else {
                 self?.nextPage()
             }
         }
@@ -133,27 +153,19 @@ class BaseWebViewController: UIViewController {
 
     }
 
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        switch keyPath {
-        case "loading":
-            print("正在加载中。。。。")
-        case "title":
-            navigationBar.titleLabel.text = webView.title
-        case "estimatedProgress":
-            let float = Float(webView.estimatedProgress)
-            navigationBar.progressView.setProgress(float, animated: true)
-        default:
-            break
-        }
-
-        guard webView.isLoading else {
-            UIView.animate(withDuration: 0.55) { [weak self] in
-                self?.navigationBar.progressView.alpha = 0.0
-                self?.navigationBar.progressView.setProgress(0.0, animated: false)
-            }
-            return
-        }
-    }
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+//        switch keyPath {
+//        case "loading":
+//            print("正在加载中。。。。")
+//        case "title":
+//            navigationBar.titleLabel.text = webView.title
+//        case "estimatedProgress":
+//            let float = Float(webView.estimatedProgress)
+//            navigationBar.progressView.setProgress(float, animated: true)
+//        default:
+//            break
+//        }
+//    }
 
     deinit {
         webView.removeObserver(self, forKeyPath: "loading")
@@ -221,7 +233,6 @@ extension BaseWebViewController: WKScriptMessageHandler {
 
     }
 }
-
 
 class BottomToolBar: UIView {
 
@@ -355,8 +366,8 @@ class NavigationBar: UIView {
         super.layoutSubviews()
 
         let window = UIApplication.shared.keyWindow
-        let H = NavigationLayout.getNavigationHeight(isFixed: true)
-        self.frame = CGRect(x: 0, y: 0, width: window?.bounds.width ?? 0.0, height: H)
+        let HHH = NavigationLayout.getNavigationHeight(isFixed: true)
+        self.frame = CGRect(x: 0, y: 0, width: window?.bounds.width ?? 0.0, height: HHH)
 
         let progressViewH = CGFloat(0.5)
         progressView.frame = CGRect(x: 0, y: self.frame.maxY-progressViewH, width: self.frame.width, height: 0.5)

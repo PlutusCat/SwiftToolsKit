@@ -17,10 +17,8 @@ class WebViewController: BaseWebViewController {
 
         let url = "https://www.apple.com"
         load(URLRequest(url: URL(string: url)!))
-        
     }
     
-
     /*
     // MARK: - Navigation
 

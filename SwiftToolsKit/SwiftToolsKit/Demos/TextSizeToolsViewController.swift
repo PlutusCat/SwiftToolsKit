@@ -19,7 +19,6 @@ class TextSizeToolsViewController: UIViewController {
         let textLabel = LabelKit(frame: CGRect(x: 0, y: 100, width: view.bounds.width, height: 60))
         textLabel.text = "测试一下测试一下测试一下"
         view.addSubview(textLabel)
-        
     }
 
 }

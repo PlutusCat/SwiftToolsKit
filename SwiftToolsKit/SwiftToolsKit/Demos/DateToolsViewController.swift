@@ -13,18 +13,13 @@ class DateToolsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .background
+        view.backgroundColor = UIColor.init(hex: 0x5fc7dc)
         title = "DateTools"
-        
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-
 
 }

@@ -14,8 +14,7 @@ extension String {
 
         var cgInt: Int = 0
 
-        if let doubleValue = Double(self)
-        {
+        if let doubleValue = Double(self) {
             cgInt = Int(doubleValue)
         }
         return cgInt
@@ -24,8 +23,7 @@ extension String {
     func floatValue() -> CGFloat {
         var cgFloat: CGFloat = 0
 
-        if let doubleValue = Double(self)
-        {
+        if let doubleValue = Double(self) {
             cgFloat = CGFloat(doubleValue)
         }
         return cgFloat

@@ -18,5 +18,4 @@ class DataModel: NSObject {
         self.info = info
     }
 
-
 }

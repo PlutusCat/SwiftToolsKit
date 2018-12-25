@@ -25,9 +25,11 @@
 		41EF761820C50387005F9627 /* DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF761720C50387005F9627 /* DateTools.swift */; };
 		41EF761A20C5079C005F9627 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF761920C5079C005F9627 /* DataModel.swift */; };
 		41FC913E213E1E9A00BEEAB4 /* StringTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC913D213E1E9A00BEEAB4 /* StringTools.swift */; };
+		D83830198B88FD66EE317F79 /* Pods_SwiftToolsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5177E1A3F6B5F572E168BFF /* Pods_SwiftToolsKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA52A179E45A4F285910F13 /* Pods-SwiftToolsKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolsKit.release.xcconfig"; path = "Target Support Files/Pods-SwiftToolsKit/Pods-SwiftToolsKit.release.xcconfig"; sourceTree = "<group>"; };
 		411C526E21757E7D009C8DF9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		411C5274217711D6009C8DF9 /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		411C527A21771BA8009C8DF9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		41EF761720C50387005F9627 /* DateTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTools.swift; sourceTree = "<group>"; };
 		41EF761920C5079C005F9627 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		41FC913D213E1E9A00BEEAB4 /* StringTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTools.swift; sourceTree = "<group>"; };
+		BCD8FA2AD13D6E43FA43F5C3 /* Pods-SwiftToolsKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolsKit.debug.xcconfig"; path = "Target Support Files/Pods-SwiftToolsKit/Pods-SwiftToolsKit.debug.xcconfig"; sourceTree = "<group>"; };
+		F5177E1A3F6B5F572E168BFF /* Pods_SwiftToolsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftToolsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				411C526F21757E7D009C8DF9 /* WebKit.framework in Frameworks */,
+				D83830198B88FD66EE317F79 /* Pods_SwiftToolsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				411C526E21757E7D009C8DF9 /* WebKit.framework */,
+				F5177E1A3F6B5F572E168BFF /* Pods_SwiftToolsKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +82,7 @@
 				41EF760320C5033D005F9627 /* SwiftToolsKit */,
 				41EF760220C5033D005F9627 /* Products */,
 				411C526D21757E7D009C8DF9 /* Frameworks */,
+				58F5A40CCDB99A2DFCC9143C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		58F5A40CCDB99A2DFCC9143C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD8FA2AD13D6E43FA43F5C3 /* Pods-SwiftToolsKit.debug.xcconfig */,
+				0EA52A179E45A4F285910F13 /* Pods-SwiftToolsKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41EF761320C5033F005F9627 /* Build configuration list for PBXNativeTarget "SwiftToolsKit" */;
 			buildPhases = (
+				F37EECC173B5F5FBFED61ECC /* [CP] Check Pods Manifest.lock */,
 				41EF75FD20C5033D005F9627 /* Sources */,
 				41EF75FE20C5033D005F9627 /* Frameworks */,
 				41EF75FF20C5033D005F9627 /* Resources */,
+				41FAAE4F21CCC5B300C33FC2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -176,6 +194,7 @@
 				TargetAttributes = {
 					41EF760020C5033D005F9627 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -209,6 +228,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41FAAE4F21CCC5B300C33FC2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		F37EECC173B5F5FBFED61ECC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftToolsKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41EF75FD20C5033D005F9627 /* Sources */ = {
@@ -370,6 +431,7 @@
 		};
 		41EF761420C5033F005F9627 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD8FA2AD13D6E43FA43F5C3 /* Pods-SwiftToolsKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,13 +444,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PlutusCat.SwiftToolsKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		41EF761520C5033F005F9627 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA52A179E45A4F285910F13 /* Pods-SwiftToolsKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -401,7 +464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PlutusCat.SwiftToolsKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
